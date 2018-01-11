@@ -1,9 +1,13 @@
-# 资金管理
+# Capital Conditions
 
 
 ```julia
 using Feather
 
-data = Feather.read("data/20171110.feather")
+data = Feather.read("data/20171210.feather")
 println(data)
+
+using Gadfly
+
+plot(data, x=:cost, y=:capital)
 ```
